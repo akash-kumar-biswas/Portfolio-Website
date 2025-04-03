@@ -11,9 +11,11 @@ body{
 }
 
 #header {
-    width: 40%;
+    width: 100%;
     height: 100vh;
-    background-image: url(Images/background_img.jpg);
+    background-image: url(Images/background_img.png);
     background-size: cover;
     background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
