@@ -28,11 +28,18 @@ body{
 
 .header-text h1 {
     font-size: 45px;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
+}
+
+.header-text p {
+    font-size: 30px;
+    position: relative;
+    bottom:80px;
 }
 
 .header-text h1 span {
     color: #ff004f;
+
 }
 
 .header-img {
@@ -44,7 +51,11 @@ body{
     width: 80%;
     max-width: 400px;
     height: auto;
+    margin-left: 175px;
+    margin-top: -50px;
 }
+
+
 
 .container{
    padding: 10px 10%;
@@ -55,16 +66,15 @@ nav{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 0;
 }
 
-.logo{
-    width: 140px;
-}
 
-nav ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 10px 20px;
+nav ul {
+    display: flex;
+    margin-left: auto;
+    position: relative;
+    top: 20px; 
 }
 
 nav ul li{
@@ -112,3 +122,4 @@ nav ul li a:hover:after{
     flex-wrap: wrap;
     gap: 20px;
 }
+
