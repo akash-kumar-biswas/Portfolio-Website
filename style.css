@@ -48,8 +48,9 @@ body{
 }
 
 .header-img img {
-    width: 80%;
+    width: 100%;
     max-width: 400px;
+    border-radius: 10px;
     height: auto;
     margin-left: 175px;
     margin-top: -50px;
@@ -123,3 +124,33 @@ nav ul li a:hover:after{
     gap: 20px;
 }
 
+.about-col-1 {
+    flex: 1;
+    min-width: 250px;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.about-col-2 {
+    flex: 2;
+    min-width: 300px;
+    position: relative;
+    left: 30px;
+}
+
+.sub-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+}
+.about-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-top: 20px;
+}
