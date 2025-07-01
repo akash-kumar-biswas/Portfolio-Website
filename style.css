@@ -185,13 +185,13 @@ nav ul li a:hover:after{
     align-items: center;
     position: relative;
     left:35px;
-    top: 25px;
+    top: 2px;
 }
 
 .education-image img {
     height: 100%;
-    width: 300%;
-    max-width: 105%;
+    width: auto;
+    max-width: 101%;
     object-fit: cover;
     border-radius: 12px;
 
