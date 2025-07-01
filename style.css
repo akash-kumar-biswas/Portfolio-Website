@@ -141,11 +141,13 @@ nav ul li a:hover:after{
 }
 
 .sub-title {
-    font-size: 30px;
-    font-weight: 600;
-    color: #f0f0f0;
-    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #fff;
 }
+
 .about-description {
     font-size: 18px;
     line-height: 1.6;
@@ -217,4 +219,51 @@ nav ul li a:hover:after{
 .education-item p {
     font-size: 16px;
     line-height: 1.6;
+}
+
+/*------------------Skill Section------------------*/
+
+#skills {
+    padding: 100px 0;
+    background: #000000;
+    color: #ffffff;
+}
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.skill-box {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgb(111, 2, 2);
+    border-radius: 8px;
+    padding: 25px;
+    transition: 0.3s ease;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 15px rgba(218, 2, 2, 0.15);
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(238, 1, 1, 0.818);
+}
+
+.skill-box h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ff004f;
+}
+
+.skill-box ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.skill-box ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #e0e0e0;
 }
