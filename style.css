@@ -107,8 +107,6 @@ nav ul li a:hover:after{
 }
 
 
-
-
 /*------------------About Section------------------*/
 #about {
     padding: 80px 0;
@@ -153,4 +151,41 @@ nav ul li a:hover:after{
     line-height: 1.6;
     color: #e0e0e0;
     margin-top: 20px;
+}
+
+/*------------------Education Section------------------*/
+
+#education {
+    padding: 100px 0;
+    color: #ababab;
+}
+
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.education-item {
+    background: #1e1e1e;
+    padding: 20px 25px;
+    border-left: 4px solid #ff004f;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.education-item:hover {
+    background: #2a2a2a;
+}
+
+.education-item h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.education-item p {
+    font-size: 16px;
+    line-height: 1.6;
 }
