@@ -160,12 +160,41 @@ nav ul li a:hover:after{
     color: #ababab;
 }
 
+.education-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
 .education-list {
+    flex: 1 1 55%;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-top: 40px;
 }
+
+.education-image {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left:35px;
+    top: 25px;
+}
+
+.education-image img {
+    height: 100%;
+    width: 300%;
+    max-width: 105%;
+    object-fit: cover;
+    border-radius: 12px;
+
+}
+
 
 .education-item {
     background: #1e1e1e;
