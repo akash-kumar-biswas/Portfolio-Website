@@ -59,12 +59,13 @@ body{
 
 
 .container{
+   justify-content: space-between;
    padding: 10px 10%;
 }
 
 nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 0;
@@ -73,9 +74,11 @@ nav{
 
 nav ul {
     display: flex;
+    gap: 2px;
     margin-left: auto;
     position: relative;
     top: 20px; 
+    right: 14px;
 }
 
 nav ul li{
@@ -87,7 +90,7 @@ nav ul li{
 nav ul li a{
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     position: relative;
 }
 
