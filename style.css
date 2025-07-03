@@ -65,7 +65,11 @@ html {
    justify-content: space-between;
    padding: 10px 10%;
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 nav{
     display: flex;
     justify-content: flex-start;
@@ -442,4 +446,179 @@ form button.btn2 {
 .sub-title_contact {
     position: relative;
     right: inherit;
+}
+
+/*------------css code for rsponsive design------------*/
+
+nav .fa-solid{
+    display: none; 
+}
+
+@media (max-width: 1080px) {
+    nav .fa-solid {
+        display: block;
+    }
+
+    #navLinks {
+    flex-direction: column;
+    background: #0a0a0a;
+    position: fixed;
+    top: 0;
+    right: -220px;
+    width: 100px;
+    height: 60vh;
+    padding-top: 60px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  #navLinks.show {
+    right: 0;
+  }
+
+  #navLinks li {
+    margin: 20px 10px;
+  }
+
+  #close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+  }
+
+  #menu-icon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+    
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-text {
+        margin-bottom: 20px;
+    }
+
+    .header-img img {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    nav ul {
+        position: static;
+        top: 0;
+        right: 0;
+        justify-content: center;
+    }
+
+    .row, .education-wrapper, .skills-grid, .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .contact-right {
+        position: static;
+        top: 0;
+    }
+    .contact-left p {
+        text-align: center;
+    }
+    .contact-left p i {
+        margin-right: 10px;
+    }
+    .contact-right form {
+        width: 90%;
+    }
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    .btn2 {
+        width: 100%;
+        text-align: center;
+        position: static;
+        top: 0;
+    }
+    .sub-title_contact {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .sub-title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .about-col-1, .about-col-2 {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+    .about-col-1 img {
+        margin: 0 auto;
+        width: 80%;
+    }
+    .about-description {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .education-image {
+        left: 0;
+        top: 0;
+        margin-top: 20px;
+    }
+    .education-list, .education-image {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+    .education-list {
+        margin-top: 20px;
+    }
+    .education-item {
+        padding: 15px;
+    }
+    .education-item h3 {
+        font-size: 18px;
+    }
+    .education-item p {
+        font-size: 14px;
+    }
+    .skill-box {
+        padding: 20px;
+    }
+    .skill-box h3 {
+        font-size: 18px;
+    }
+    .skill-box ul li {
+        font-size: 14px;
+    }
+    .project-card {
+        padding: 15px;
+    }
+    .project-card h3 {
+        font-size: 16px;
+    }
+    .project-card p {
+        font-size: 12px;
+    }
+    .project-card a {
+        font-size: 14px;
+    }
+    .repo-link {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    .social-icons a {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
 }
