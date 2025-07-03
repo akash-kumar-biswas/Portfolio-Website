@@ -258,12 +258,20 @@
                 <a href="Images/My_CV.pdf" download class="btn"> Download CV </a>
             </div> 
             <div class="contact-right">
-                <form>
+                <form name="submit-to-google-sheet" class="contact-form">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea rows="5" name="Message" placeholder="Your Message" required></textarea>
                     <button type="submit" class="btn2">Send Message</button>
                 </form> 
+                <span class="form-message">
+                    <i class="fa-solid fa-check"></i>
+                    Message sent successfully!
+                </span>
+                <span class="form-error">
+                    <i class="fa-solid fa-xmark"></i>
+                    Error sending message. Please try again.
+                </span>
             </div>
         </div>
     </div>
@@ -279,6 +287,44 @@
 
   closeIcon.addEventListener('click', () => {
     navLinks.classList.remove('show');
+  });
+</script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzIsmg_kOXf2luGxs8SQs2GBI4bL5srmBMjWveZQcUgOLT4oeygOZME9PG1yF_TkRvP/exec';
+  const form = document.forms['submit-to-google-sheet'];
+  const successMsg = document.querySelector('.form-message');
+  const errorMsg = document.querySelector('.form-error');
+
+  successMsg.style.display = 'none';
+  errorMsg.style.display = 'none';
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        if (response.ok) {
+          successMsg.style.display = 'inline-flex';
+          errorMsg.style.display = 'none';
+          form.reset();
+
+          setTimeout(() => {
+            successMsg.style.display = 'none';
+          }, 3000);
+        } else {
+          throw new Error('Response not OK');
+        }
+      })
+      .catch(error => {
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'inline-flex';
+
+        setTimeout(() => {
+          errorMsg.style.display = 'none';
+        }, 5000);
+
+        console.error('Error!', error.message);
+      });
   });
 </script>
 </body>

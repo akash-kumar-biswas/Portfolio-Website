@@ -448,6 +448,42 @@ form button.btn2 {
     right: inherit;
 }
 
+.form-message,
+.form-error {
+  display: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+.form-message {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  position: relative;
+  top: -40px;
+}
+
+.form-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  position: relative;
+  top: -40px;
+}
+
+.form-message i,
+.form-error i {
+  font-size: 16px;
+}
+
+
 /*------------css code for rsponsive design------------*/
 
 nav .fa-solid{
