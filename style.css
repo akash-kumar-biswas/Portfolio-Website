@@ -545,6 +545,8 @@ nav .fa-solid{
     .header-img img {
         margin: 0 auto;
         width: 80%;
+        max-width: 300px;
+        margin-top: -70px;
     }
 
     nav ul {
