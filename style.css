@@ -597,6 +597,8 @@ nav .fa-solid{
     .sub-title {
         text-align: center;
         margin-bottom: 20px;
+        position: relative;
+        right: 20px;
     }
     .about-col-1, .about-col-2 {
         flex: 1 1 100%;
