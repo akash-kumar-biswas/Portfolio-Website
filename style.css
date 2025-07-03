@@ -594,12 +594,19 @@ nav .fa-solid{
         text-align: center;
         margin-bottom: 20px;
     }
-    .sub-title {
+    .sub-title-about {
         text-align: center;
         margin-bottom: 20px;
         position: relative;
-        right: 20px;
+        color: #fff;
+        right: 30px;
     }
+
+    .sub-title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
     .about-col-1, .about-col-2 {
         flex: 1 1 100%;
         text-align: center;
@@ -611,6 +618,8 @@ nav .fa-solid{
     .about-description {
         font-size: 16px;
         line-height: 1.5;
+        position: relative;
+        right: 25px;
     }
     .education-image {
         left: 0;
