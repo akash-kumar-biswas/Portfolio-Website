@@ -597,7 +597,10 @@ nav .fa-solid{
     .contact-right {
         position: static;
         top: 0;
+        position: relative;
+        right: -20px;
     }
+
     .contact-left p {
         text-align: center;
     }
@@ -653,6 +656,7 @@ nav .fa-solid{
         top: 0;
         margin-top: 20px;
     }
+
     .education-list, .education-image {
         flex: 1 1 100%;
         text-align: center;
