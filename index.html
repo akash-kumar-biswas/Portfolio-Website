@@ -253,21 +253,25 @@
                 <a href="Images/My_CV.pdf" download class="btn"> Download CV </a>
             </div> 
             <div class="contact-right">
-                <form name="submit-to-google-sheet" class="contact-form">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea rows="5" name="Message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn2">Send Message</button>
-                </form> 
-                <span class="form-message">
-                    <i class="fa-solid fa-check"></i>
-                    Message sent successfully!
-                </span>
-                <span class="form-error">
-                    <i class="fa-solid fa-xmark"></i>
-                    Error sending message. Please try again.
-                </span>
-            </div>
+    <form name="submit-to-google-sheet" class="contact-form">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea rows="5" name="Message" placeholder="Your Message" required></textarea>
+        
+        <button type="submit" class="btn2">Send Message</button>
+        
+        <!-- Move these inside the form, right after the button -->
+        <span class="form-message" style="display: none;">
+            <i class="fa-solid fa-check"></i>
+            Message sent successfully!
+        </span>
+        <span class="form-error" style="display: none;">
+            <i class="fa-solid fa-xmark"></i>
+            Error sending message. Please try again.
+        </span>
+    </form> 
+</div>
+
         </div>
     </div>
 </div>
