@@ -19,7 +19,7 @@ html {
     align-items: center;
     justify-content: space-between;
     height: 100vh;
-    padding: 0 10%;
+    padding: 10px 0 10px;
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -47,7 +47,7 @@ html {
 
 .header-img {
     flex: 1;
-    text-align: right;
+    text-align: left;
 }
 
 .header-img img {
@@ -55,8 +55,9 @@ html {
     max-width: 400px;
     border-radius: 10px;
     height: auto;
-    margin-left: 175px;
+    margin-left: 0px;
     margin-top: -50px;
+    z-index: -1;
 }
 
 
@@ -85,7 +86,7 @@ nav ul {
     margin-left: auto;
     position: relative;
     top: 20px; 
-    right: 14px;
+    right: -80px;
 }
 
 nav ul li{
@@ -119,7 +120,7 @@ nav ul li a:hover:after{
 
 /*------------------About Section------------------*/
 #about {
-    padding: 100px 0 100px; 
+    padding: 70px 0 40px; 
     color: #ababab;
     scroll-margin-top: 0;
 }
@@ -177,7 +178,7 @@ nav ul li a:hover:after{
 /*------------------Education Section------------------*/
 
 #education {
-    padding: 100px 0 100px; 
+    padding: 70px 0 40px; 
     color: #ababab;
     scroll-margin-top: 0;
 }
@@ -244,7 +245,7 @@ nav ul li a:hover:after{
 /*------------------Skill Section------------------*/
 
 #skills {
-    padding: 100px 0 100px; 
+    padding: 40px 0 50px; 
     background: #000000;
     color: #ffffff;
     scroll-margin-top: 0;
@@ -290,9 +291,9 @@ nav ul li a:hover:after{
 }
 
 
-/*------------------Skill Section------------------*/
+/*------------------project Section------------------*/
 #projects {
-    padding: 100px 0 100px; 
+    padding: 30px 0 100px; 
     background-color: #000000;
     padding: 60px 0;
     color: #ffffff;
@@ -358,7 +359,7 @@ nav ul li a:hover:after{
 /*------------------Contact Section------------------*/
 
 #contact {
-    padding: 100px 0 100px; 
+    padding: 80px 0 70px; 
     background-color: #000;
     color: #fff;
     scroll-margin-top: 0;
@@ -546,7 +547,25 @@ nav .fa-solid{
         text-align: center;
     }
 
-    .header-text {
+    #home {
+        padding: 50px 0 0px;
+    }
+    #about {
+        padding: 40px 0 0px;
+    }
+    #education {
+        padding: 0px 0 60px;
+    }
+    #skills {
+        padding: 40px 0 60px;
+    }
+    #projects {
+        padding: 30px 0 70px;
+    }
+    #contact {
+        padding: 80px 0 60px;
+    }
+    .header-text{
         margin-bottom: 20px;
     }
 
@@ -554,9 +573,9 @@ nav .fa-solid{
         margin: 0 auto;
         width: 80%;
         max-width: 300px;
-        margin-top: -100px;
+        margin-top: 30px;
         position: relative;
-        right: 25px;
+        right: -40px;
     }
 
     nav ul {
