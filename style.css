@@ -217,7 +217,6 @@ nav ul li a:hover:after{
     max-width: 101%;
     object-fit: cover;
     border-radius: 12px;
-
 }
 
 
@@ -227,6 +226,12 @@ nav ul li a:hover:after{
     border-left: 4px solid #ff004f;
     border-radius: 8px;
     transition: background 0.3s ease;
+    margin-bottom: 50px;
+}
+
+.education-grid{
+    margin-top: -30px;
+    margin-bottom: 15px;
 }
 
 .education-item:hover {
@@ -570,7 +575,7 @@ nav .fa-solid{
         padding: 80px 0 60px;
     }
     .header-text{
-        margin-bottom: 20px;
+        margin-top: -50px;
     }
 
     .header-img img {
@@ -670,6 +675,10 @@ nav .fa-solid{
     }
     .education-item {
         padding: 15px;
+        margin-bottom: 40px;
+    }
+    .education-grid {
+       margin-top: -20px;
     }
     .education-item h3 {
         font-size: 18px;
