@@ -173,6 +173,8 @@ nav ul li a:hover:after{
     line-height: 1.6;
     color: #e0e0e0;
     margin-top: 20px;
+    position: relative;
+    bottom: 20px;
 }
 
 /*------------------Education Section------------------*/
