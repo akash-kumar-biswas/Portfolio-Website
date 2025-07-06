@@ -183,6 +183,7 @@ nav ul li a:hover:after{
     padding: 10px 0 40px; 
     color: #ababab;
     scroll-margin-top: 0;
+    margin-top: 90px;
 }
 
 .education-wrapper {
