@@ -463,9 +463,9 @@ form button.btn2 {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 15px;
+  padding: 10px 10px;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   margin-top: 10px;
   line-height: 1.4;
@@ -542,7 +542,7 @@ nav .fa-solid{
 }
 
 @media (max-width: 768px) {
-    
+
     .header-content {
         flex-direction: column;
         align-items: center;
@@ -705,4 +705,15 @@ nav .fa-solid{
         margin-right: 10px;
     }
 
+    .form-message {
+        position: relative;
+        left: 0px;
+        top: -60px;
+   }
+
+    .form-error {
+        position: relative;
+        left: 0px;
+        top: -60px;
+    }
 }
