@@ -14,14 +14,13 @@ I plan to build a **more interactive and professional portfolio** in the future 
 
 ## 🚀 Features
 
-- **Home Section:** Introduction with animated text  
+- **Home Section:** introduce the website and give a brief overview of who I am
 - **About Me:** Short description of myself  
 - **Education Section:** Display of academic background  
 - **Skills Section:** List of technical skills  
 - **Projects Section:** Interactive project cards with hover effects  
 - **Contact Form:** Basic contact form (frontend only, no backend)  
 - **Responsive Design:** Works on desktop and mobile devices  
-- **Dark Theme Layout:** Modern minimalist design
 
 ---
 
