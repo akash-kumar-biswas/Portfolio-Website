@@ -1,35 +1,34 @@
-# Personal Portfolio Website
+# Practice Portfolio Website
 
 ### 🔗 [Live Demo](https://akash-kumar-biswas.github.io/Portfolio-Website/) &nbsp; | &nbsp; [GitHub Repository](https://github.com/akash-kumar-biswas/Portfolio-Website)
 
-## 📄 About The Project
+## 📄 About This Project
 
-This is my **Personal Portfolio Website**, built using **HTML**, **CSS**, and **JavaScript**.  
-It showcases my professional profile, skills, projects, and contact information in a clean and interactive format.
+This is a **Practice Portfolio Website** created to improve my skills in **HTML**, **CSS**, and **JavaScript**.  
+The website includes multiple sections like **Home**, **About Me**, **Education**, **Skills**, **Projects**, and **Contact**.
 
-The website is fully responsive and optimized for both desktop and mobile users.
+This project is part of my learning process in front-end web development.  
+I plan to build a **more interactive and professional portfolio** in the future with backend integration and database support.
 
 ---
 
 ## 🚀 Features
 
-- **Home Section:** Introduction with animated text and smooth navigation  
-- **About Me:** Brief summary of my background and education  
-- **Skills Section:** Technical skills showcased with modern UI design  
+- **Home Section:** Introduction with animated text  
+- **About Me:** Short description of myself  
+- **Education Section:** Display of academic background  
+- **Skills Section:** List of technical skills  
 - **Projects Section:** Interactive project cards with hover effects  
-- **Contact Form:** Simple contact form (currently frontend only)  
-- **Responsive Design:** Mobile-friendly layout  
-- **Dark Theme Aesthetic:** Minimalist and modern color scheme  
+- **Contact Form:** Basic contact form (frontend only, no backend)  
+- **Responsive Design:** Works on desktop and mobile devices  
+- **Dark Theme Layout:** Modern minimalist design
 
 ---
 
 ## 🛠️ Built With
 
 - **HTML5**  
-- **CSS3**  
+- **CSS3** (Flexbox, Grid, Media Queries)  
 - **JavaScript**
 
 ---
-
-## 📂 Project Structure
-
