@@ -7,9 +7,6 @@
 This is a **Practice Portfolio Website** created to improve my skills in **HTML**, **CSS**, and **JavaScript**.  
 The website includes multiple sections like **Home**, **About Me**, **Education**, **Skills**, **Projects**, and **Contact**.
 
-This project is part of my learning process in front-end web development.  
-I plan to build a **more interactive and professional portfolio** in the future with backend integration and database support.
-
 ---
 
 ## 🚀 Features
