@@ -330,13 +330,27 @@ nav ul li a:hover:after{
 }
 
 .project-card {
-    background: #01181b;
-    border: 1px solid #ab0000;
-    border-radius: 12px;
+    background: #02252b;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(161, 1, 1, 0.89);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+    text-align: left;
 }
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;          
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+
 
 .project-card:hover {
     transform: translateY(-5px);
@@ -357,7 +371,7 @@ nav ul li a:hover:after{
 }
 
 .project-card a {
-    color: #5c04b9;
+    color: #7a02fa;
     text-decoration: none;
     font-weight: 500;
     transition: 0.2s ease;
@@ -375,7 +389,7 @@ nav ul li a:hover:after{
 }
 
 .repo-link:hover {
-    background-color: #032439; 
+    background-color: #045e840a; 
 }
 
 /*------------------Contact Section------------------*/
