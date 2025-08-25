@@ -544,11 +544,11 @@ nav .fa-solid{
 
     #navLinks {
     flex-direction: column;
-    background: #0a0a0a;
+    background: #01282e;
     position: fixed;
     top: 0;
     right: -220px;
-    width: 150px;
+    width: 200px;
     height: 60vh;
     padding-top: 60px;
     transition: right 0.3s ease-in-out;
@@ -560,7 +560,7 @@ nav .fa-solid{
   }
 
   #navLinks li {
-    margin: 20px 15px;
+    margin: 20px 20px;
   }
 
   #close-icon {
