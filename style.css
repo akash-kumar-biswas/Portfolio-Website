@@ -358,7 +358,7 @@ nav ul li a:hover:after{
 }
 
 .project-card a {
-    color: #7b00ff;
+    color: #1f0838;
     text-decoration: none;
     font-weight: 500;
     transition: 0.2s ease;
@@ -376,7 +376,7 @@ nav ul li a:hover:after{
 }
 
 .repo-link:hover {
-    background-color: #023947; 
+    background-color: #10404d; 
 }
 
 /*------------------Contact Section------------------*/
