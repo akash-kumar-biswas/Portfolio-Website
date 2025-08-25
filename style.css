@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: #000000;
+    background-color: #01181c;
     color: #fff;
 }
 
@@ -78,6 +78,17 @@ nav{
     flex-wrap: wrap;
     margin-bottom: 0;
 }
+
+#name-top-left {
+    position: absolute;
+    top: 35px;       /* distance from top */
+    left: 100px;      /* distance from left */
+    font-size: 20px; /* adjust size */
+    font-weight: bold;
+    color: #b8b5b6;     /* change color if needed */
+    z-index: 1000;   /* ensures it stays on top */
+}
+
 
 
 nav ul {
@@ -257,7 +268,7 @@ nav ul li a:hover:after{
 
 #skills {
     padding: 40px 0 50px; 
-    background: #000000;
+    background: #01181c;
     color: #ffffff;
     scroll-margin-top: 0;
     margin-top: 20px;
@@ -271,7 +282,7 @@ nav ul li a:hover:after{
 }
 
 .skill-box {
-    background: rgba(0, 0, 0, 0.03);
+    background: #04292f(0, 0, 0, 0.03);
     border: 1px solid #ab0000;
     border-radius: 8px;
     padding: 25px;
@@ -306,7 +317,7 @@ nav ul li a:hover:after{
 /*------------------project Section------------------*/
 #projects {
     padding: 0px 0 100px; 
-    background-color: #000000;
+    background-color: #01181c;
     padding: 60px 0;
     color: #ffffff;
     scroll-margin-top: 0;
@@ -372,7 +383,7 @@ nav ul li a:hover:after{
 
 #contact {
     padding: 80px 0 70px; 
-    background-color: #000;
+    background-color: #01181c;
     color: #fff;
     scroll-margin-top: 0;
 }
@@ -439,7 +450,7 @@ form textarea {
     width: 100%;
     border: 0;
     outline: none;
-    background: #262626;
+    background: #151515;
     padding: 15px;
     margin: 15px 0;
     color: #fff;
