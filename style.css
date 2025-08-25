@@ -81,12 +81,12 @@ nav{
 
 #name-top-left {
     position: absolute;
-    top: 35px;       /* distance from top */
-    left: 100px;      /* distance from left */
-    font-size: 20px; /* adjust size */
+    top: 35px;     
+    left: 100px;      
+    font-size: 20px; 
     font-weight: bold;
-    color: #b8b5b6;     /* change color if needed */
-    z-index: 1000;   /* ensures it stays on top */
+    color: #b8b5b6;     
+    z-index: 1000;   
 }
 
 
