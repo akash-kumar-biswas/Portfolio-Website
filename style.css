@@ -347,6 +347,7 @@ nav ul li a:hover:after{
     height: auto;          
     border-radius: 10px;
     margin-bottom: 15px;
+    display: block;
 }
 
 
