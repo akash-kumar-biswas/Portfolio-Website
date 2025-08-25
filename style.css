@@ -81,8 +81,8 @@ nav{
 
 #name-top-left {
     position: absolute;
-    top: 35px;     
-    left: 100px;      
+    margin-top: 35px;     
+    margin-left: 100px;      
     font-size: 20px; 
     font-weight: bold;
     color: #b8b5b6;     
@@ -561,6 +561,16 @@ nav .fa-solid{
     right: 20px;
     top: 20px;
   }
+
+  #name-top-left {
+    position: absolute;
+    margin-top: 30px;     
+    margin-left: 50px;      
+    font-size: 20px; 
+    font-weight: bold;
+    color: #b8b5b6;     
+}
+
 }
 
 @media (max-width: 768px) {
@@ -605,6 +615,15 @@ nav .fa-solid{
         position: relative;
         right: -40px;
     }
+
+    #name-top-left {
+    position: absolute;
+    margin-top: -25px;     
+    margin-left: 50px;      
+    font-size:15px; 
+    font-weight: bold;
+    color: #b8b5b6;     
+}
 
     nav ul {
         position: static;
