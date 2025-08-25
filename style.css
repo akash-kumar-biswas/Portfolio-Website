@@ -357,7 +357,7 @@ nav ul li a:hover:after{
 }
 
 .project-card a {
-    color: #1f0838;
+    color: #5c04b9;
     text-decoration: none;
     font-weight: 500;
     transition: 0.2s ease;
@@ -375,7 +375,7 @@ nav ul li a:hover:after{
 }
 
 .repo-link:hover {
-    background-color: #10404d; 
+    background-color: #032439; 
 }
 
 /*------------------Contact Section------------------*/
@@ -564,8 +564,8 @@ nav .fa-solid{
 
   #name-top-left {
     position: absolute;
-    margin-top: 30px;     
-    margin-left: 50px;      
+    margin-top: 20px;     
+    margin-left: 30px;      
     font-size: 20px; 
     font-weight: bold;
     color: #b8b5b6;     
@@ -588,6 +588,7 @@ nav .fa-solid{
     #about {
         padding: 40px 0 0px;
     }
+    
     #education {
         padding: 0px 0 120px;
         margin-bottom: -90px;
@@ -619,7 +620,7 @@ nav .fa-solid{
     #name-top-left {
     position: absolute;
     margin-top: -25px;     
-    margin-left: 50px;      
+    margin-left: 20px;      
     font-size:15px; 
     font-weight: bold;
     color: #b8b5b6;     
