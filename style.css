@@ -345,8 +345,8 @@ nav ul li a:hover:after{
 .project-card img {
     width: 100%;
     height: auto;  
-    max-height: 200px;     
-    object-fit: cover;  
+    max-height: 100%;   
+    object-fit: contain; 
     border-radius: 10px;
     margin-bottom: 15px;
     display: block;
@@ -375,7 +375,7 @@ nav ul li a:hover:after{
 }
 
 .project-card a {
-    color: #7a02fa;
+    color: #0116ffca;
     text-decoration: none;
     font-weight: 500;
     transition: 0.2s ease;
