@@ -1,10 +1,8 @@
-# Practice Portfolio Website
-
-### 🔗 [Live Demo](https://akash-kumar-biswas.github.io/Portfolio-Website/) &nbsp; | &nbsp; [GitHub Repository](https://github.com/akash-kumar-biswas/Portfolio-Website)
+# Portfolio Website
 
 ## 📄 About This Project
 
-This is a **Practice Portfolio Website** created to improve my skills in **HTML**, **CSS**, and **JavaScript**.  
+This is my **Portfolio Website** built with **HTML**, **CSS**, and **JavaScript**, **PHP** and **MySQL**.
 The website includes multiple sections like **Home**, **About Me**, **Education**, **Skills**, **Projects**, and **Contact**.
 
 ---
@@ -17,7 +15,8 @@ The website includes multiple sections like **Home**, **About Me**, **Education*
 - **Skills Section:** List of technical skills  
 - **Projects Section:** Interactive project cards with hover effects  
 - **Contact Form:** Basic contact form (frontend only, no backend)  
-- **Responsive Design:** Works on desktop and mobile devices  
+- **Responsive Design:** Works on desktop and mobile devices
+- **Admin Panel:** Secure backend panel built with PHP and MySQL to manage projects dynamically
 
 ---
 
@@ -26,5 +25,7 @@ The website includes multiple sections like **Home**, **About Me**, **Education*
 - **HTML5**  
 - **CSS3** (Flexbox, Grid, Media Queries)  
 - **JavaScript**
+- **PHP**
+- **MySQL**
 
 ---
