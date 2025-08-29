@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link rel="stylesheet" href="../style.css">
   <style>
     body{display:flex;min-height:100vh;align-items:center;justify-content:center;background:#01181c;color:#fff}
-    .card{background:#02252b;padding:24px;border-radius:16px;max-width:360px;width:100%}
+    .card{background:#02252b;padding:24px;border-radius:16px;max-width:360px;width:100%}.card h2{text-align:center;margin-bottom: 20px;}
     input,button{width:100%;padding:10px;border-radius:10px;border:none;margin-bottom:12px}
     button{background:#ff004f;color:#fff;cursor:pointer}
     .muted{color:#ccc;font-size:14px}
