@@ -165,13 +165,21 @@
 
 <!-- ---------projects---------- -->
 <?php
-$mysqli = new mysqli("localhost", "root", "", "portfolio");
-if ($mysqli->connect_error) { die("DB error: ".$mysqli->connect_error); }
+require_once "config.php"; 
+
+$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+
+if ($mysqli->connect_error) {
+    die("DB error: " . $mysqli->connect_error);
+}
+
 $projects = $mysqli->query("SELECT * FROM projects ORDER BY created_at DESC");
-function e($s){ return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); }
+
+function e($s) {
+    return htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
+}
 ?>
 
-<!-- ---------projects---------- -->
  
 <div id="projects">
   <div class="container">
