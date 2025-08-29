@@ -246,5 +246,6 @@ function e($s) {
 </div>
 <script src="script1.js"></script> 
 <script src="script2.js"></script>
+<script src="admin/switch-to-admin.js"></script>
 </body>
 </html>
