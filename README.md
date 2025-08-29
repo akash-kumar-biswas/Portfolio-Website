@@ -2,7 +2,7 @@
 
 ## 📄 About This Project
 
-This is my **Portfolio Website** built with **HTML**, **CSS**, and **JavaScript**, **PHP** and **MySQL**.
+This is my **Portfolio Website** built with **HTML**, **CSS**, **JavaScript**, **PHP** and **MySQL**.
 The website includes multiple sections like **Home**, **About Me**, **Education**, **Skills**, **Projects**, and **Contact**.
 
 ---
