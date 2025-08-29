@@ -344,7 +344,9 @@ nav ul li a:hover:after{
 
 .project-card img {
     width: 100%;
-    height: auto;          
+    height: auto;  
+    max-height: 200px;     
+    object-fit: cover;  
     border-radius: 10px;
     margin-bottom: 15px;
     display: block;
@@ -368,6 +370,8 @@ nav ul li a:hover:after{
     color: #ccc;
     margin-bottom: 10px;
     line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
 .project-card a {
