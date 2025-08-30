@@ -81,6 +81,7 @@
         </div>
     </div>
 </div>
+
 <!-- ---------skills---------- -->
 <div id="skills">
     <div class="container">
@@ -164,86 +165,45 @@
 </div>
 
 <!-- ---------projects---------- -->
+<?php
+require_once "config.php"; 
+
+$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+
+if ($mysqli->connect_error) {
+    die("DB error: " . $mysqli->connect_error);
+}
+
+$projects = $mysqli->query("SELECT * FROM projects ORDER BY created_at DESC");
+
+function e($s) {
+    return htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
+}
+?>
+
+ 
 <div id="projects">
-    <div class="container">
-        <h1 class="sub-title">Projects</h1>
-        <div class="projects-grid">
+  <div class="container">
+    <h1 class="sub-title">Projects</h1>
+    <div class="projects-grid">
 
-            <div class="project-card">
-                <img src="Images/portfolio-website.jpg" alt="Portfolio Website Preview" class="project-img">
-                    <h3>Portfolio Website</h3>
-                    <p>This is my personal responsive website built with HTML, CSS, and JavaScript to showcase my profile, skills, and projects.</p>
-                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-                    <p><strong>GitHub:</strong>
-                        <a class="repo-link" href="https://github.com/akash-kumar-biswas/Portfolio-Website" target="_blank">
-                            View Repository
-                        </a> 
-                    </p>
-            </div>
-
-
-            <div class="project-card">
-                <img src="Images/study-planner-app.jpg" alt="Study Planner Preview" class="project-img">
-                <h3>Study Planner Application</h3>
-                <p>JavaFX-based desktop application for organizing study tasks and reminders. Includes FXML layout design and MySQL database integration.</p>
-                <p><strong>Technologies:</strong> JavaFX, FXML, JDBC, MySQL</p>
-                <p><strong>GitHub:</strong>
-                    <a class="repo-link" href="https://github.com/akash-kumar-biswas/Study-Planner-Application" target="_blank">
-                        View Repository
-                    </a>
-                </p>
-            </div>
-
-            <div class="project-card">
-                <img src="Images/cpu-logisim.jpg" alt="CPU Design Preview" class="project-img">
-                <h3>CPU Design</h3>
-                <p>Designed a basic 28-bit CPU architecture in Logisim including ALU, control unit, registers, and instruction cycle simulation.</p>
-                <p><strong>Technologies:</strong> Logisim (Digital Circuit Simulation)</p>
-                <p><strong>GitHub:</strong> 
-                    <a class="repo-link" href="https://github.com/akash-kumar-biswas/CPU-Design-In-Logisim" target="_blank">
-                        View Repository
-                    </a>
-                </p>
-            </div>
-
-            <div class="project-card">
-                <img src="Images/digital-clock.jpg" alt="Digital Clock Preview" class="project-img">
-                <h3>Digital Clock</h3>
-                <p>A working digital clock designed in Logisim using counters, flip-flops, and logic gates.</p>
-                <p><strong>Technologies:</strong> Logisim (Digital Circuit Simulation)</p>
-                <p><strong>GitHub:</strong> 
-                    <a class="repo-link" href="https://github.com/akash-kumar-biswas/Digital-Clock-in-Logisim" target="_blank">
-                        View Repository
-                    </a>
-                </p>
-            </div>
-            <div class="project-card">
-                <img src="Images/student-hall-management.jpg" alt="Student Hall Management Preview" class="project-img">
-                <h3>Student Hall Management System (Console-Based)</h3>
-                <p>A console-based system built using Object-Oriented Programming in C++ for managing hall student data.</p>
-                <p><strong>Technologies:</strong> C++, OOP</p>
-                <p><strong>GitHub:</strong> 
-                    <a class="repo-link" href="https://github.com/akash-kumar-biswas/student_hall_management_system" target="_blank">
-                        View Repository
-                    </a>
-                </p>
-            </div>
-
-            <div class="project-card">
-                <img src="Images/Numerical-Methods.jpg" alt="Numerical Methods Preview" class="project-img">
-                <h3>Console Application Using Numerical Methods</h3>
-                <p>This is a team project involved building a comprehensive C++ console application that implements key numerical algorithms to solve linear/non-linear equations, differential equations, and perform matrix inversion.Working on this project helped us deepen our understanding of numerical analysis, strengthen our C++ skills, and improve our collaboration through version control and teamwork.</p>
-                <p><strong>Technologies:</strong> C++</p>
-                <p><strong>GitHub:</strong> 
-                    <a class="repo-link" href="https://github.com/Farid-43/Console_Application_Development_Using_Numerical_Methods" target="_blank">
-                        View Repository
-                    </a>
-                </p>
-            </div>    
+      <?php while($p = $projects->fetch_assoc()): ?>
+        <div class="project-card">
+          <img src="Images/<?php echo e($p['image_file']); ?>" alt="<?php echo e($p['title']); ?> Preview" class="project-img">
+          <h3><?php echo e($p['title']); ?></h3>
+          <p><?php echo e($p['description']); ?></p>
+          <p><strong>Technologies:</strong> <?php echo e($p['technologies']); ?></p>
+          <?php if(!empty($p['github_link'])): ?>
+            <p><strong>GitHub:</strong>
+              <a class="repo-link" href="<?php echo e($p['github_link']); ?>" target="_blank">View Repository</a>
+            </p>
+          <?php endif; ?>
         </div>
-    </div>
-</div>
+      <?php endwhile; ?>
 
+    </div>
+  </div>
+</div>
 
 <!-- ---------Contact---------- -->
 <div id="contact">
@@ -286,5 +246,6 @@
 </div>
 <script src="script1.js"></script> 
 <script src="script2.js"></script>
+<script src="admin/switch-to-admin.js"></script>
 </body>
 </html>
