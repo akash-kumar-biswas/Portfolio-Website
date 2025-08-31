@@ -82,12 +82,29 @@
     </div>
 </div>
 
-<!-- ---------skills---------- -->
 
 <?php
+require_once "config.php"; 
+
+// Single DB connection
+$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+if ($mysqli->connect_error) {
+    die("DB error: " . $mysqli->connect_error);
+}
+
+// Escape function
+function e($s) {
+    return htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
+}
+
+// Fetch categories for skills
 $categories = $mysqli->query("SELECT DISTINCT category FROM skills ORDER BY category");
+
+// Fetch projects
+$projects = $mysqli->query("SELECT * FROM projects ORDER BY created_at DESC");
 ?>
 
+<!-- ---------skills---------- -->
 <div id="skills">
   <div class="container">
     <h1 class="sub-title">My Skills</h1>
@@ -113,23 +130,6 @@ $categories = $mysqli->query("SELECT DISTINCT category FROM skills ORDER BY cate
 </div>
 
 <!-- ---------projects---------- -->
-<?php
-require_once "config.php"; 
-
-$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
-
-if ($mysqli->connect_error) {
-    die("DB error: " . $mysqli->connect_error);
-}
-
-$projects = $mysqli->query("SELECT * FROM projects ORDER BY created_at DESC");
-
-function e($s) {
-    return htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
-}
-?>
-
- 
 <div id="projects">
   <div class="container">
     <h1 class="sub-title">Projects</h1>
