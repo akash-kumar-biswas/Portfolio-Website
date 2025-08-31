@@ -108,7 +108,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       <div class="password-wrapper">
         <input type="password" name="password" placeholder="Password" id="password" required>
-        <span class="toggle-password" onclick="togglePassword()">◎</span>
       </div>
 
       <label class="muted" style="display:flex;gap:8px;align-items:center">
