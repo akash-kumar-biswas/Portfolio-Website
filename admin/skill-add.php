@@ -39,6 +39,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <input type="text" name="name" placeholder="Skill name (e.g. Python)" required>
     <button type="submit">Save</button>
   </form>
-  <p><a href="dashboard.php" style="color:#ff004f">← Back</a></p>
 </body>
 </html>
