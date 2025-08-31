@@ -2,9 +2,14 @@
 require_once __DIR__ . '/_init.php';
 require_login();
 
-$rows = $mysqli->query("SELECT id, title, image_file, created_at FROM projects ORDER BY created_at DESC");
+// Skills
+$skills = $mysqli->query("SELECT id, name, level FROM skills ORDER BY id DESC"); 
+$totalSkills = $skills->num_rows;
 
-$totalProjects = $rows->num_rows; // Count total projects
+// Projects
+$rows = $mysqli->query("SELECT id, title, image_file, created_at FROM projects ORDER BY created_at DESC");
+$totalProjects = $rows->num_rows;
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -13,14 +18,14 @@ $totalProjects = $rows->num_rows; // Count total projects
   <link rel="stylesheet" href="../style.css">
   <style>
     body{background:#01181c;color:#fff;padding:24px}
-    a{color:#7a02fa}
+    a{color:#7a02fa;text-decoration:none}
     .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
     
     .stats-grid{
       display:grid;
       grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
       gap:16px;
-      margin-bottom:20px;
+      margin-bottom:40px;
     }
     .stat-card{
       background:#02252b;
@@ -32,7 +37,7 @@ $totalProjects = $rows->num_rows; // Count total projects
     .stat-card h3{margin:0;font-size:1.2rem;color:#aaa}
     .stat-card p{margin-top:8px;font-size:2rem;font-weight:bold;color:#ff004f}
 
-    table{width:100%;border-collapse:collapse;background:#02252b;border-radius:12px;overflow:hidden}
+    table{width:100%;border-collapse:collapse;background:#02252b;border-radius:12px;overflow:hidden;margin-bottom:40px}
     th,td{padding:12px;border-bottom:1px solid rgba(255,255,255,0.06);text-align:left}
     tr:hover{background:rgba(255,255,255,0.03)}
     .btn{display:inline-block;padding:6px 12px;border-radius:10px;background:#ff004f;color:#fff;text-decoration:none}
@@ -41,18 +46,52 @@ $totalProjects = $rows->num_rows; // Count total projects
   </style>
 </head>
 <body>
+
+  <!-- TOTAL STATS -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h3>Total Skills</h3>
+      <p><?php echo $totalSkills; ?></p>
+    </div>
+    <div class="stat-card">
+      <h3>Total Projects</h3>
+      <p><?php echo $totalProjects; ?></p>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="top">
+    <h2>Skills</h2>
+    <div>
+      <a class="btn" href="skill-add.php">+ Add Skill</a>
+    </div>
+  </div>
+
+  <table>
+    <tr><th>ID</th><th>Name</th><th>Level</th><th>Actions</th></tr>
+    <?php if ($totalSkills > 0): ?>
+      <?php while($s = $skills->fetch_assoc()): ?>
+        <tr>
+          <td><?php echo (int)$s['id']; ?></td>
+          <td><?php echo e($s['name']); ?></td>
+          <td><?php echo e($s['level']); ?></td>
+          <td class="actions">
+            <a href="skill-edit.php?id=<?php echo (int)$s['id']; ?>">Edit</a>
+            <a href="skill-delete.php?id=<?php echo (int)$s['id']; ?>" onclick="return confirm('Delete this skill?')">Delete</a>
+          </td>
+        </tr>
+      <?php endwhile; ?>
+    <?php else: ?>
+      <tr><td colspan="4">No skills found</td></tr>
+    <?php endif; ?>
+  </table>
+
+  <!-- PROJECTS -->
   <div class="top">
     <h2>Projects</h2>
     <div>
       <a class="btn" href="project-add.php">+ Add Project</a>
       <a class="btn" href="logout.php" style="background:#444;margin-left:8px">Logout</a>
-    </div>
-  </div>
-
-  <div class="stats-grid">
-    <div class="stat-card">
-      <h3>Total Projects</h3>
-      <p><?php echo $totalProjects; ?></p>
     </div>
   </div>
 
@@ -81,5 +120,6 @@ $totalProjects = $rows->num_rows; // Count total projects
       <tr><td colspan="5">No projects found</td></tr>
     <?php endif; ?>
   </table>
+
 </body>
 </html>
