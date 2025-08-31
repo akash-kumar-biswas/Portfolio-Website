@@ -112,6 +112,71 @@ $totalProjects = $projects->num_rows;
     color: #ecececff; /* changed from pink to white */
   }
 
+  /* Skills table only */
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #02252b;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  table-layout: fixed; /* equal column control */
+}
+
+.skills-table th,
+.skills-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  text-align: left;
+}
+
+.skills-table th:nth-child(1),
+.skills-table td:nth-child(1) { width: 15%; }  
+
+.skills-table th:nth-child(2),
+.skills-table td:nth-child(2) { width: 25%; }  
+
+.skills-table th:nth-child(3),
+.skills-table td:nth-child(3) { width: 25%; } 
+
+.skills-table th:nth-child(4),
+.skills-table td:nth-child(4) { width: 35%; } 
+
+
+.projects-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #02252b;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  table-layout: fixed; 
+}
+
+.projects-table th,
+.projects-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  text-align: left;
+}
+
+.projects-table th:nth-child(1),
+.projects-table td:nth-child(1) { width: 10%; }  
+
+.projects-table th:nth-child(2),
+.projects-table td:nth-child(2) { width: 25%; }  
+
+.projects-table th:nth-child(3),
+.projects-table td:nth-child(3) { width: 20%; text-align: center; }  
+
+.projects-table th:nth-child(4),
+.projects-table td:nth-child(4) { width: 20%; }  ]
+
+.projects-table th:nth-child(5),
+.projects-table td:nth-child(5) { width: 25%; } ]
+
+
+
     .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
     table{width:100%;border-collapse:collapse;background:#02252b;border-radius:12px;overflow:hidden;margin-bottom:40px}
     th,td{padding:12px;border-bottom:1px solid rgba(255,255,255,0.06);text-align:left}
@@ -179,7 +244,7 @@ $totalProjects = $projects->num_rows;
       </div>
     </div>
 
-    <table>
+    <table class="skills-table">
       <tr><th>ID</th><th>Category</th><th>Name</th><th>Actions</th></tr>
       <?php if ($totalSkills > 0): ?>
         <?php while($s = $skills->fetch_assoc()): ?>
@@ -210,7 +275,7 @@ $totalProjects = $projects->num_rows;
       </div>
     </div>
 
-    <table>
+    <table class="projects-table">
       <tr><th>ID</th><th>Title</th><th>Image</th><th>Created</th><th>Actions</th></tr>
       <?php if ($totalProjects > 0): ?>
         <?php while($p = $projects->fetch_assoc()): ?>
