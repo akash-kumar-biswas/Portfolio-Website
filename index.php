@@ -83,85 +83,33 @@
 </div>
 
 <!-- ---------skills---------- -->
+
+<?php
+$categories = $mysqli->query("SELECT DISTINCT category FROM skills ORDER BY category");
+?>
+
 <div id="skills">
-    <div class="container">
-        <h1 class="sub-title">My Skills</h1>
+  <div class="container">
+    <h1 class="sub-title">My Skills</h1>
 
-        <div class="skills-grid">
-
-            <div class="skill-box">
-                <h3>Programming Languages</h3>
-                <ul>
-                    <li>C</li>
-                    <li>C++</li>
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>JavaScript</li>
-                </ul>
-            </div>
-
-            <div class="skill-box">
-                <h3>Web Development</h3>
-                <ul>
-                    <li>HTML, CSS, JavaScript</li>
-                    <li>PHP</li>
-                    <li>Responsive UI Design</li>
-                </ul>
-            </div>
-
-            <div class="skill-box">
-                <h3>Android Development</h3>
-                <ul>
-                    <li>Java</li>
-                    <li>Android Studio</li>
-                    <li>XML Layout Design</li>
-                    <li>Event Handling</li>
-                    <li>Database Management</li>
-                </ul>
-            </div>
-
-            <div class="skill-box">
-                <h3>Desktop Application Development</h3>
-                <ul>
-                    <li>JavaFX</li>
-                    <li>NetBeans,IntelliJ IDEA</li>
-                    <li>FXML Layout Design</li>
-                    <li>phpMyAdmin </li>
-                    <li>Event Handling</li>
-                    <li>JSON Parsing</li>
-                    <li>MySQL</li>
-                    <li>Java Database Connectivity (JDBC)</li>
-                </ul>
-            </div>
-
-            <div class="skill-box">
-                <h3>Tools & Technologies</h3>
-                <ul>
-                    <li>Git & GitHub</li>
-                    <li>phpMyAdmin </li>
-                    <li>MySQL</li>
-                    <li>Oracle DBMS</li>
-                    <li>VS Code</li>
-                    <li>Android Studio</li>
-                    <li>NetBeans</li>
-                    <li>IntelliJ IDEA</li>
-                    <li>Logisim</li>
-                    <li>Arduino</li>
-                </ul>
-            </div>
-
-            <div class="skill-box">
-                <h3>Other Skills</h3>
-                <ul>
-                    <li>Data Structures & Algorithms</li>
-                    <li>Problem Solving</li>
-                    <li>Logic Circuit Design (Logisim)</li>
-                    <li>Basic Logic Circuit Design (Lab-based)</li>
-                </ul>
-            </div>
-
+    <div class="skills-grid">
+      <?php while($cat = $categories->fetch_assoc()): ?>
+        <div class="skill-box">
+          <h3><?php echo e($cat['category']); ?></h3>
+          <ul>
+            <?php
+            $skills = $mysqli->query(
+              "SELECT name FROM skills WHERE category='" . $mysqli->real_escape_string($cat['category']) . "' ORDER BY name"
+            );
+            while($s = $skills->fetch_assoc()):
+            ?>
+              <li><?php echo e($s['name']); ?></li>
+            <?php endwhile; ?>
+          </ul>
         </div>
+      <?php endwhile; ?>
     </div>
+  </div>
 </div>
 
 <!-- ---------projects---------- -->
