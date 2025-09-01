@@ -34,7 +34,7 @@ $totalProjects = $projects->num_rows;
         display: flex;
         justify-content: flex-end; 
         margin-top: 18px;  
-        margin-bottom: -15px;        
+        margin-bottom: -20px;        
         margin-right: 16px;        
         z-index: 1000;
     }
@@ -47,6 +47,8 @@ $totalProjects = $projects->num_rows;
         background:#ff004f;
         color:#fff;
         text-decoration:none;
+        float: right;
+        margin-right: 16px;
         transition: background 0.3s ease;
       }
       .btn:hover{
@@ -68,7 +70,6 @@ $totalProjects = $projects->num_rows;
       color:#fff;
     }
 
-    /* MAIN CONTENT PADDING TO AVOID COLLISION WITH LOGOUT */
     .main-content {
       padding-top: 70px;
     }
@@ -83,8 +84,9 @@ $totalProjects = $projects->num_rows;
       display:grid;
       grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
       gap:16px;
-      margin-bottom:15px;
+      margin-bottom:35px;
     }
+
     .stat-card{
       background:#02252b;
       border-radius:12px;
@@ -94,9 +96,15 @@ $totalProjects = $projects->num_rows;
 
       display: flex;
       flex-direction: column;
-      justify-content: center; /* vertical centering */
-      align-items: center;     /* horizontal centering */
-      height: 180px;           /* optional: make all cards same height */
+      justify-content: center; 
+      align-items: center;     
+      height: 180px;      
+      border-radius: 10px; 
+    }
+
+    .stat-card:hover{
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(6, 89, 131, 0.67); 
     }
 
     .stat-card h3 {
@@ -109,10 +117,9 @@ $totalProjects = $projects->num_rows;
     margin-top: 8px;
     font-size: 3rem;
     font-weight: bold;
-    color: #ecececff; /* changed from pink to white */
+    color: #ecececff; 
   }
 
-  /* Skills table only */
 .skills-table {
   width: 100%;
   border-collapse: collapse;
@@ -120,7 +127,7 @@ $totalProjects = $projects->num_rows;
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 40px;
-  table-layout: fixed; /* equal column control */
+  table-layout: fixed; 
 }
 
 .skills-table th,
