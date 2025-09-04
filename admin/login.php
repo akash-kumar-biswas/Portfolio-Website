@@ -19,11 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($remember) {
       $token = bin2hex(random_bytes(32));
-      $exp   = date('Y-m-d H:i:s', time() + 60*60*24*14);
+      $exp   = date('Y-m-d H:i:s', time() + 60*60*24*30);
       $up = $mysqli->prepare("UPDATE admin_users SET remember_token=?, remember_expiry=? WHERE id=?");
       $up->bind_param("ssi", $token, $exp, $user['id']);
       $up->execute();
-      setcookie('remember_token', $token, time()+60*60*24*14, APP_BASE.'/', '', true, true);
+      setcookie('remember_token', $token, time()+60*60*24*30, APP_BASE.'/', '', true, true);
     }
 
     header("Location: ".APP_BASE."/admin/dashboard.php");
@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </div>
 
       <label class="muted" style="display:flex;gap:8px;align-items:center">
-        <input type="checkbox" name="remember" value="1" style="width:auto"> Remember me (uses cookie)
+        <input type="checkbox" name="remember" value="1" style="width:auto"> Remember me 
       </label>
       <button type="submit">Login</button>
     </form>

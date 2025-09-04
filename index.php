@@ -116,8 +116,7 @@ $projects = $mysqli->query("SELECT * FROM projects ORDER BY created_at DESC");
           <ul>
             <?php
             $skills = $mysqli->query(
-              "SELECT name FROM skills WHERE category='" . $mysqli->real_escape_string($cat['category']) . "' ORDER BY name"
-            );
+              "SELECT name FROM skills WHERE category='" . $mysqli->real_escape_string($cat['category'])."'");
             while($s = $skills->fetch_assoc()):
             ?>
               <li><?php echo e($s['name']); ?></li>
